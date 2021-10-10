@@ -1,0 +1,9 @@
+:~  title+'Graph Query'
+    info+'Graph query, written by ~nortex-ramnyd'
+    color+0x4b.4b4b
+    glob-http+['https://raw.githubusercontent.com/hosted-fornet/graph-query/0e1b155e7088aebc8265999927ac80330c6e7343/globs/glob-0v2.2afvj.d7qa5.5f5mo.0amse.adscm.glob' 0v2.2afvj.d7qa5.5f5mo.0amse.adscm]
+    base+'graph-query'
+    version+[0 0 0]
+    website+'https://github.com/h5gq3/graph-query'
+    license+'Unspecified'
+==

@@ -2,10 +2,42 @@
 
 ## installation
 
-`rsync -av src/ $URBIT_SHIP_DIR/home/`
-or your specified desk instead of `home`
-or from dojo
-`|sync %home ~nortex-ramnyd %graph-query`
+to install from source:
+
+in ship dojo:
+```
+:: set up `%graph-query` desk
+|merge %graph-query our %base
+|mount %graph-query
+```
+
+in bash:
+```bash
+# checkout the urbit repo
+git clone https://github.com/urbit/urbit.git
+
+# checkout the graph query repo
+git clone https://github.com/h5gq3/graph-query.git
+
+# copy make script into Urbit `pkg` dir
+cd urbit/pkg
+cp ../graph-query/scripts/make-graph-query.sh .
+
+# run make script to populate `%graph-query` desk, setting
+# `PATH_TO_PIER` to point to your ship pier
+PATH_TO_PIER=/path/to/pier && ./make-graph-query.sh $PATH_TO_PIER ../../graph-query/src
+```
+
+in ship dojo:
+```
+:: install
+|commit %graph-query
+|install our %graph-query
+
+:: publish, if desired
+=dir /=garden
+:treaty|publish %graph-query
+```
 
 ## generator input arguments
 
